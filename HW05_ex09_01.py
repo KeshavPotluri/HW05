@@ -8,10 +8,21 @@
 
 # Body
 
+def readFile():
+	inFile = open("words.txt")
+	outFile = open("result.txt", "w")
+
+	for line in inFile:
+		if(len(line)>20):
+			outFile.write(line)
+	outFile.close()
+	outFile = open("result.txt")
+	print outFile.read()
+
 
 ##############################################################################
 def main():
-    pass # Call your functions here.
+    readFile() # Call your functions here.
 
 if __name__ == '__main__':
     main()
